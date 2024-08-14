@@ -18,6 +18,12 @@ public class ContactCreateController {
         this.view = view;
     }
 
+    public void addContact() {
+        contact = view.doInputs();
+        model.createContact(contact);
+        view.getOutput(readContacts(model.createContact(contact)));
+    }
+
     public String readContacts(Map<String, String> map) {
         AtomicInteger count = new AtomicInteger(0);
         StringBuilder stringBuilder = new StringBuilder();
