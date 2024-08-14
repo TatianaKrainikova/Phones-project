@@ -1,5 +1,7 @@
 package app.database;
 
+import app.database.entities.Contact;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,5 +19,9 @@ public class DataProvider {
         return map;
     }
 
-
+    public static Map<String, String> addData(Contact name, Contact phone) {
+        getData();
+        map.put(name.getName(), phone.getPhone());
+        return map;
+    }
 }
