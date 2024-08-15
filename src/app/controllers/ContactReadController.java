@@ -16,6 +16,10 @@ public class ContactReadController {
         this.view = view;
     }
 
+    public void getContacts() {
+        view.getOutput(readContacts());
+    }
+
     public String readContacts() {
         Map<String, String> map = model.readContacts();
         AtomicInteger count = new AtomicInteger(0);
